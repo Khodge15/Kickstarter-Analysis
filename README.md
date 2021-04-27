@@ -26,9 +26,9 @@ This analysis was straightforward and I did not encounter any challenges.
 #### Table
 A new sheet in the Kickstarter dataset was created with 8 columns and 12 rows. The first column was labeled Goals, the next three were number of Succesful, failed and canceled, then total projects, and the last three were precentage of Succeful, Failed and Canceled. The rows were labeld by goal amount less than $1000,  then at a range of $5000 incerments, and more then $50,000. 
 
-Next, the COUNTIFS() function was used to populate the number of succesful, failed and canceled projects at each goal level. I used code from [Microsoft] (https://support.microsoft.com/en-us/office/countif-function-e0de10c6-f885-4e71-abb4-1f464816df34) and adapted it to fit this data set. The first row was pretty straight forward using the following code =COUNTIFS(Kickstarter!F:F,"successful", Kickstarter!D:D,"<1000", Kickstarter!Q:Q,"plays"). I struggled a bit on the ranges and searched for IF statments between two numbers and used example code from [Corporate Finance Institute] (https://corporatefinanceinstitute.com/resources/excel/study/if-statement-between-two-numbers/) to adapt the following code =COUNTIFS(Kickstarter!F:F,"failed",Kickstarter!D:D,">=10000",Kickstarter!D:D,"<=14999", Kickstarter!Q:Q,"plays"). When I got the number canceled all the columns were zero. I knew the code was working so I went to the original data set and created a pivot table with sub category on the row,   outcomes on the columns, and outcome counts as the value. I was able to see very quickly that in this data set none of the fundraisers for plays were canceled (see "Screen Shot 2021-04-27 at 12 47 49 PM" attachede in repository). 
+Next, the COUNTIFS() function was used to populate the number of succesful, failed and canceled projects at each goal level. I used code from [Microsoft] (https://support.microsoft.com/en-us/office/countif-function-e0de10c6-f885-4e71-abb4-1f464816df34) and adapted it to fit this data set. The first row was pretty straight forward using the following code =COUNTIFS(Kickstarter!F:F,"successful", Kickstarter!D:D,"<1000", Kickstarter!Q:Q,"plays"). I struggled a bit on the ranges and searched for IF statments between two numbers and used example code from [Corporate Finance Institute] (https://corporatefinanceinstitute.com/resources/excel/study/if-statement-between-two-numbers/) to adapt the following code =COUNTIFS(Kickstarter!F:F,"failed",Kickstarter!D:D,">=10000",Kickstarter!D:D,"<=14999", Kickstarter!Q:Q,"plays"). When I got the number canceled all the columns were zero. I knew the code was working so I went to the original data set and created a pivot table with sub category on the row,  outcomes on the columns, and outcome counts as the value. I was able to see very quickly that in this data set none of the fundraisers for plays were canceled (see "Screen Shot 2021-04-27 at 12 47 49 PM" attachede in repository). 
 
-Then, the SUM() function was used to add up the three number of outcomes columns to populate the total projects column using the following code =SUM(B2:D2). After, that thefollowing code was used to populate the last three percentage of outcomes columns =IFERROR(ROUND((D13/E13), 2),0). The last three columns were then formated to be percentages. My original code did not include the IFERROR function and there were errors in the last row of succeful and failed and the enitre culumn for canceled. The IFERROR and and ROUND functions were implelemnted from [lesson 1.2.6] (https://courses.bootcampspot.com/courses/587/pages/1-dot-2-6-errors-and-debugging?module_item_id=187825). 
+Then, the SUM() function was used to add up the three number of outcomes columns to populate the total projects column using the following code =SUM(B2:D2). After, that thefollowing code was used to populate the last three percentage of outcomes columns =IFERROR(ROUND((D13/E13), 2),0). The last three columns were then formated to be percentages. My original code did not include the IFERROR() function and there were errors in the last row of succeful and failed and the enitre culumn for canceled. The IFERROR() and and ROUND() functions were implelemnted from [lesson 1.2.6] (https://courses.bootcampspot.com/courses/587/pages/1-dot-2-6-errors-and-debugging?module_item_id=187825). 
 
 #### Line Graph
 A line graph was created with the goal amount on the x-axis and the percent of outcomes on the y-axis. I couldnt remember how to select only part of a table to use only the percentage columns so I used the filtering to deselect all on the other four columns. This eliminated them from the line graph (see attached "Outcome_vs_goal.png" in the repository).
@@ -44,19 +44,19 @@ As described above the challenges and solutions I encountered included the follo
 ## Results
 
 - What are two conclusions you can draw about the Outcomes based on Launch Date?
- 1. May is the most frequest month to launch a new fundraising campaign and December is the least frequent. 
- 2. Theater fundraisers are largerly more succesful than not regardless of launch date. 
+   1. May is the most frequest month to launch a new fundraising campaign and December is the least frequent. 
+   2. Theater fundraisers are largerly more succesful than not regardless of launch date. 
 
 - What can you conclude about the Outcomes based on Goals?
- 1. Based on the line graph there were no fundraisers over $45,000. 
- 2. There dosent seem to be a pattern on outcmes vs goals in predicting success or failure of a fundraiser. 
+   1. Based on the line graph there were no fundraisers over $45,000. 
+   2. There dosent seem to be a pattern on outcmes vs goals in predicting success or failure of a fundraiser. 
 
 - What are some limitations of this dataset?
- 1. One limitation in this data set is a variable on methods of reaching potential doners (i.e. cold calls, social media, membership lists).   
- 2. Another limitiation is a variable for how much money was actually donated. There is a variable to show how much money was pledged but not how many people actaully followed through.  
+   1. One limitation in this data set is a variable on methods of reaching potential doners (i.e. cold calls, social media, membership lists).   
+   2. Another limitiation is a variable for how much money was actually donated. There is a variable to show how much money was pledged but not how many people actaully followed through.  
 
 - What are some other possible tables and/or graphs that we could create?
- 1. A data table and line graph simialr to the outcome based on goals with launch date and pledged to see if that gives more information on the impact on launch date. Do people give more in the spring and summer than other times of the year?  
- 2. Analysis on the duration of the fundraiser and outcomes might be insightful as well. I would create a column subtractng the end date from the launch date to find out how many weeks or months a fundraiser was active and then use a table and line graphs similar to the ones for outcomes based on goals. 
+   1. A data table and line graph simialr to the outcome based on goals with launch date and pledged to see if that gives more information on the impact on launch date. Do people give more in the spring and summer than other times of the year?  
+   2. Analysis on the duration of the fundraiser and outcomes might be insightful as well. I would create a column subtractng the end date from the launch date to find out how many weeks or months a fundraiser was active and then use a table and line graphs similar to the ones for outcomes based on goals. 
 
 
