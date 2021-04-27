@@ -12,10 +12,7 @@ In order to uncover trends in the Kickstarter dataset and provide recomendations
 
 ### Analysis of Outcomes Based on Launch Date
 #### Timestamp
-In the original data (see attached in the repository), launch date was coded as Unix Timestamp. Using the formula from [Lesson 1.3.3] (https://courses.bootcampspot.com/courses/587/pages/1-dot-3-3-timing-success?module_item_id=187837) new column was created called Date Created Conversion and the code '''excel
-=(((K2/60)/60)/24)+DATE(1970,1,1)
-''' 
-was used to convert the entire column. 
+In the original data (see attached in the repository), launch date was coded as Unix Timestamp. Using the formula from [Lesson 1.3.3] (https://courses.bootcampspot.com/courses/587/pages/1-dot-3-3-timing-success?module_item_id=187837) new column was created called Date Created Conversion and the code Blue("=(((K2/60)/60)/24)+DATE(1970,1,1)")was used to convert the entire column. 
 
 #### Pivot Table
 Next a Pivot Table was created with Date Created on the rows and outcomes on the columns. The value was count of outcomes.  The table was filtered by category to show only theater and year was added as an additioanl filter (see attached "Screen Shot 2021-04-26 at 4 02 01 PM" in repository). The outcome Live was filtered out of the table and subsequent graph. 
