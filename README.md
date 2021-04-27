@@ -18,7 +18,7 @@ In the original data (see attached in the repository), launch date was coded as 
 Next a Pivot Table was created with Date Created on the rows and outcomes on the columns. The value was count of outcomes.  The table was filtered by category to show only theater and year was added as an additioanl filter (see attached "Screen Shot 2021-04-26 at 4 02 01 PM" in repository). The outcome Live was filtered out of the table and subsequent graph. 
 
 #### Linegraph
-Last a line graph was created to show the outcomes based on launch date by highlihgting the pivot table and inserting a line graph (see attached "Theater)Outcomes_vs_Launch.png" in the repository). 
+Last a line graph was created to show the outcomes based on launch date by highlihgting the pivot table and inserting a line graph (see attached "Theater_Outcomes_vs_Launch.png" in the repository). 
 
 This analysis was straightforward and I did not encounter any challenges. 
 
