@@ -47,9 +47,17 @@ As described above the challenges and solutions I encountered included the follo
 ## Results
 
 - What are two conclusions you can draw about the Outcomes based on Launch Date?
+  1. May is the most frequest month to launch a new fundraising campaign and December is the least frequent. 
+  2. Theater fundraisers are largerly more succesful than not regardless of launch date. 
 
 - What can you conclude about the Outcomes based on Goals?
+Based on the line graph there were no fundraisers over $45,000. There dosent seem to be a pattern on outcmes vs goals in predicting success or failure of a fundraiser. 
 
 - What are some limitations of this dataset?
+One limitation in this data set is a variable on methods of reaching potential doners and a variable for actual money donated. There is a variable to how much money was pledged but how many people actaully followed through?  
 
 - What are some other possible tables and/or graphs that we could create?
+  1. A data table and line graph simialr to the outcome based on goals with launch date and pledged to see if that gives more information on the impact on launch date. Do people give more in the spring and summer than other times of the year?  
+  2. Analysis on the duration of the fundraiser and outcomes might be insightful as well. I would create a column subtractng the end date from the launch date to find out how many weeks or months a fundraiser was active and then use a table and line graphs similar to the ones for outcomes based on goals. 
+
+
