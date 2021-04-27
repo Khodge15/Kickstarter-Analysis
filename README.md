@@ -13,9 +13,9 @@ In order to uncover trends in the Kickstarter dataset and provide recomendations
 ### Analysis of Outcomes Based on Launch Date
 #### Timestamp
 In the original data (see attached in the repository), launch date was coded as Unix Timestamp. Using the formula from [Lesson 1.3.3] (https://courses.bootcampspot.com/courses/587/pages/1-dot-3-3-timing-success?module_item_id=187837) new column was created called Date Created Conversion and the code 
-'''diff
+,div class="text-red on grey>
 =(((K2/60)/60)/24)+DATE(1970,1,1)
-''' 
+</div>
 was used to convert the entire column. 
 
 #### Pivot Table
